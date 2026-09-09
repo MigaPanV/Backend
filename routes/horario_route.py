@@ -676,7 +676,8 @@ def obtener_horarios_usuario(id):
             h.dia,
             h.hora_inicio,
             h.hora_fin,
-            h.salon
+            h.salon,
+            u.id
         FROM horarios h
         INNER JOIN usuarios u
             ON h.usuario_id = u.id
@@ -709,7 +710,8 @@ def obtener_horarios_usuario(id):
             "dia": fila[8],
             "hora_inicio": str(fila[9]),
             "hora_fin": str(fila[10]),
-            "salon": fila[11]
+            "salon": fila[11],
+            "id_usuario": fila[12]
         })
 
     cursor.close()
