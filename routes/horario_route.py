@@ -643,6 +643,11 @@ def eliminar_usuario(id):
     conexion = conectar()
     cursor = conexion.cursor()
 
+    cursor.execute( """
+        DELETE FROM horarios
+        WHERE usuario_id = %s
+        """, (id,) 
+    )
     cursor.execute("""
         DELETE FROM usuarios
         WHERE id = %s
