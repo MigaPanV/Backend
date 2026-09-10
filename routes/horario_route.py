@@ -352,12 +352,12 @@ def crear_horario():
 
     return jsonify({
         "id": nuevo_id,
-        "usuario_id": usuario_id,
-        "numero_semestre": numero_semestre,
-        "periodo_academico": periodo_academico,
+        "id_usuario": usuario_id,
+        "semestre": numero_semestre,
+        "periodo": periodo_academico,
         "materia_id": materia_id,
         "codigo_materia": codigo_materia,
-        "nombre_materia": nombre_materia,
+        "materia": nombre_materia,
         "profesor": profesor,
         "jornada": jornada,
         "dia": dia,
